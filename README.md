@@ -1,2 +1,3 @@
-# aws-secrets-manager-migration-to-vault
-How to use the terraform-vault-secretsmanager-to-vault-migration TF module
+# Overview
+
+This is an exmaple on how to use the terraform-vault-secretsmanager-to-vault-migration TF module found here: 
