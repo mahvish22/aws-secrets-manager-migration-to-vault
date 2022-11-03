@@ -1,0 +1,4 @@
+image: samgabrail/tf-vault-ansible-docker-k8s:latest
+vscode:
+  extensions:
+    - hashicorp.terraform
