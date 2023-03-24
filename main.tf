@@ -1,5 +1,6 @@
 terraform {
   required_version = ">= 1.3.0"
+   
    cloud {
     hostname = "app.terraform.io"
     organization = "terraform_test_cloud"
@@ -16,6 +17,8 @@ terraform {
     vault = {
       source  = "hashicorp/vault"
       version = "3.9.1"
+      address = var.vault_address
+      token = data.aws_ssm_parameter.vault_token.value
     }
   }
 }

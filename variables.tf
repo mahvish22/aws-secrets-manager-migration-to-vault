@@ -16,7 +16,10 @@ variable "vault_kv_path" {
   type        = string
   default     = "secret"
 }
-
+variable "vault_address" {
+  description = "Vault endpoint address"
+  default = "http://127.0.0.1:8200"
+}
 variable "vault_namespace" {
   description = "The Vault namespace to send the secrets to. This only applies to Vault Enterprise. Default below is for HCP Vault for the admin namespace. This value gets ignored if working with an OSS Vault cluster"
   type = string
