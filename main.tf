@@ -22,9 +22,8 @@ terraform {
 }
 provider "vault" {
   address = "http://127.0.0.1:8200"
-  token = "root"
+  token = "hvs.oMgxlkhmmAIyK0ujJyqc6eWj"
 }
-
 
 module "secretsmanager-to-vault-migration" {
   source  = "samgabrail/secretsmanager-to-vault-migration/vault"
