@@ -2,13 +2,13 @@
 variable "aws_region" {
   description = "AWS region where the secrets live"
   type        = string
-  default     = "us-east-1"
+  default     = "us-west-2"
 }
 
 variable "secret_names" {
   description = "Migrate these secrets from AWS secrets manager to Vault. These are the names of the secrets in AWS Secrets Manager"
   type        = list(string)
-  default = ["samg-migration-vault", "samg-migration-vault2"]
+  default = ["mah-migration-vault",]
 }
 
 variable "vault_kv_path" {
