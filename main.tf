@@ -17,12 +17,13 @@ terraform {
     vault = {
       source  = "hashicorp/vault"
       version = "3.9.1"
-      address = var.vault_address
-      token = data.aws_ssm_parameter.vault_token.value
-    }
+        }
   }
 }
-
+provider "vault" {
+  address = "http://127.0.0.1:8200"
+  token = "root"
+}
 
 
 module "secretsmanager-to-vault-migration" {
