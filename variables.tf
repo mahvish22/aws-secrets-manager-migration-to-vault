@@ -7,8 +7,9 @@ variable "aws_region" {
 
 variable "secret_names" {
   description = "Migrate these secrets from AWS secrets manager to Vault. These are the names of the secrets in AWS Secrets Manager"
-  type        = string
-  }
+  type        = list(string)
+  default = ["mah-migration-vault",]
+}
 
 variable "vault_kv_path" {
   description = "The path in the KV secrets engine, don't append a forward slash '/'. Make sure this path exists ahead of time"
