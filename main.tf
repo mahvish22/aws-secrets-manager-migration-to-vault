@@ -1,5 +1,13 @@
 terraform {
-  required_version = ">= 0.15"
+  required_version = ">= 1.3.0"
+   cloud {
+    hostname = "app.terraform.io"
+    organization = "terraform_test_cloud"
+
+    workspaces {
+      name = "migrate-secret-in-vault"
+    } 
+    } 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -11,6 +19,8 @@ terraform {
     }
   }
 }
+
+
 
 module "secretsmanager-to-vault-migration" {
   source  = "samgabrail/secretsmanager-to-vault-migration/vault"
