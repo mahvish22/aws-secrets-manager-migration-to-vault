@@ -8,7 +8,7 @@ variable "aws_region" {
 variable "secret_names" {
   description = "Migrate these secrets from AWS secrets manager to Vault. These are the names of the secrets in AWS Secrets Manager"
   type        = list(string)
-  default = ["mah-migration-vault",]
+  default = ["mah-migration-vault"]
 }
 
 variable "vault_kv_path" {
@@ -21,4 +21,9 @@ variable "vault_namespace" {
   description = "The Vault namespace to send the secrets to. This only applies to Vault Enterprise. Default below is for HCP Vault for the admin namespace. This value gets ignored if working with an OSS Vault cluster"
   type = string
   default = "admin"
+}
+
+variable "vault_address" {
+  description = "Vault endpoint address"
+  default = "http://127.0.0.1:8200"
 }
